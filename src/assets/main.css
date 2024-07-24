@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Great Vibes';
+    src:
+        local('Great Vibes Regular') url(./fonts/GreatVibes/GreatVibes-Regular.woff2)
+            format('woff2'),
+        url(./fonts/GreatVibes/GreatVibes-Regular.woff) format('woff'),
+        url(./fonts/GreatVibes/GreatVibes-Regular.ttf) format('ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src:
+        local('Releway Regular') url(./fonts/Releway/Raleway-Medium.woff2) format('woff2'),
+        url(./fonts/Releway/Raleway-Medium.woff) format('woff'),
+        url(./fonts/Releway/Raleway-Medium.ttf) format('ttf');
+    font-weight: 400;
+}
+
+html {
+    background-color: #000000;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+}
