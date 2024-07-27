@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useServiceItemsStore } from '@/stores/serviceItemStore'
 import ServiseItemComponent from '../ServicesCommponents/ServiseItemComponent.vue'
+import { useServiceItemsStore } from '@/stores/serviceItemStore'
 </script>
 
 <template>
@@ -33,7 +33,7 @@ import ServiseItemComponent from '../ServicesCommponents/ServiseItemComponent.vu
         margin-inline: 5px;
     }
 
-    h3{
+    h3 {
         margin-top: 40px;
     }
     .main__service-container {

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
 import CommetContent from './CommetContent.vue'
+import AddCommentHref from './AddCommentHref.vue';
 import { useCommentsStore } from '@/stores/commets'
+import { computed, ref } from 'vue'
 
 const commentLength = useCommentsStore().$state.comments.length
 const commentIndex = ref<number>(0)
@@ -42,6 +43,7 @@ const prevComment = () => {
             />
         </div>
         <div class="comments__count">{{ commentIndex + 1 }}/{{ commentLength }}</div>
+        <AddCommentHref/>
     </section>
 </template>
 

@@ -22,6 +22,11 @@ const router = createRouter({
             path: '/contacts',
             name: 'contacts',
             component: () => import('@/components/ContactsComponents/ContactsPage.vue')
+        },
+        {
+            path: '/comment-form',
+            name: 'comment-form',
+            component: () => import('@/components/FormComponents/FomrPage.vue')
         }
     ]
 })

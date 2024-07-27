@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-
 import LoaderMainComponent from './components/LoaderMainComponent.vue'
 import HeaderMainComponent from './components/HeaderComponents/HeaderMainComponent.vue'
 import ChoiceNavComponent from './components/HeaderComponents/NavPonel/ChoiceNavComponent.vue'
 import FooterComponent from './components/FooterComponents/FooterComponent.vue'
+
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
