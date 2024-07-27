@@ -5,9 +5,8 @@ import ServiseItemComponent from '../ServicesCommponents/ServiseItemComponent.vu
 
 <template>
     <section class="main__service">
-
         <h3>Услуги</h3>
-        
+
         <div class="main__service-container">
             <ServiseItemComponent
                 v-for="(item, index) in useServiceItemsStore().$state.serviceItems.slice(0, 3)"
@@ -19,7 +18,6 @@ import ServiseItemComponent from '../ServicesCommponents/ServiseItemComponent.vu
 
         <RouterLink to="services" class="main__services-href">Все услуги</RouterLink>
     </section>
-
 </template>
 
 <style lang="scss" scoped>
@@ -34,6 +32,10 @@ import ServiseItemComponent from '../ServicesCommponents/ServiseItemComponent.vu
     @media screen and (width < 400px) {
         margin-inline: 5px;
     }
+
+    h3{
+        margin-top: 40px;
+    }
     .main__service-container {
         display: flex;
         flex-direction: row;
@@ -42,7 +44,7 @@ import ServiseItemComponent from '../ServicesCommponents/ServiseItemComponent.vu
         flex-wrap: wrap;
         gap: 40px;
     }
-    .main__services-href{
+    .main__services-href {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -53,6 +55,4 @@ import ServiseItemComponent from '../ServicesCommponents/ServiseItemComponent.vu
         border-radius: 40px;
     }
 }
-
-
 </style>

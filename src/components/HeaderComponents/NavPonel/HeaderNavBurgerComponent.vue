@@ -40,6 +40,10 @@ function isOpen(): void {
     background-color: black;
     z-index: 100;
 
+    @media screen and (width<550px) {   
+        top: 5px;      
+    }
+
     span {
         position: absolute;
         width: 30px;

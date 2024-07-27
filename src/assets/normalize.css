@@ -368,6 +368,7 @@ h5,
 h6 {
     font-family: 'Great Vibes';
     font-weight: 400;
+    margin: 0;
 }
 
 h1 {
@@ -377,4 +378,5 @@ h1 {
 h2,
 h3 {
     font-size: 30px;
+    padding: 20px;
 }

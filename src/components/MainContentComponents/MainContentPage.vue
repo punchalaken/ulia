@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CommentComponent from './CommetsComponents/CommentComponent.vue'
 import MainServicesComponent from './MainServicesComponent.vue'
 </script>
 
@@ -12,6 +13,7 @@ import MainServicesComponent from './MainServicesComponent.vue'
     </section>
 
     <MainServicesComponent />
+    <CommentComponent/>
 </template>
 
 <style lang="scss" scoped>
@@ -24,27 +26,27 @@ import MainServicesComponent from './MainServicesComponent.vue'
     margin-top: 20px;
     gap: 20px;
 
-    @media screen and (width<800px){
+    @media screen and (width<800px) {
         flex-direction: column;
     }
 
-    .main__motto{
+    .main__motto {
         display: flex;
         flex-direction: column;
         align-items: center;
         font-family: 'Great Vibes';
         font-size: clamp(0.3rem, 1rem + 1.5vw, 3rem);
 
-        .first{
+        .first {
             padding-right: 80px;
         }
 
-        .second{
+        .second {
             padding-left: 80px;
         }
     }
 
-    img {
+    .main__photo {
         width: 360px;
         height: 360px;
     }

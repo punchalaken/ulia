@@ -10,6 +10,6 @@ defineProps<{
 
 <style lang="scss" scoped>
 .header__name {
-    font-size: clamp(0.3rem, 0.45rem + 1.5vw, 3rem);
+    font-size: clamp(0.3rem, 0.40rem + 1.5vw, 3rem);
 }
 </style>

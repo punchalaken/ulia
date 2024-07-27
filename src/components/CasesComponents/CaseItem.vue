@@ -13,12 +13,12 @@ defineProps<{
             <img
                 :src="`/src/assets/images/casesImages/${before}.jpg`"
                 alt="Фотография до"
-                class="case__image before-image"
+                class="case__image circular-mask"
             />
             <img
                 :src="`/src/assets/images/casesImages/${after}.jpg`"
                 alt="Фотография после"
-                class="case__image after-image"
+                class="case__image circular-mask"
             />
         </div>
     </div>
@@ -72,26 +72,14 @@ defineProps<{
             }
         }
 
-        .before-image {
-            mask-image: linear-gradient(
-                to left,
-                rgba(0, 0, 0, 1) calc(100% - 20px),
-                rgba(0, 0, 0, 0)
+        .circular-mask {
+            mask-image: radial-gradient(
+                circle,
+                rgba(0, 0, 0, 1) 70%,
+                rgba(0, 0, 0, 0) 100%
             );
 
-            @media screen and (width<650px) {
-                mask-image: none;
-            }
-        }
-
-        .after-image {
-            mask-image: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 1) calc(100% - 20px),
-                rgba(0, 0, 0, 0)
-            );
-
-            @media screen and (width<650px) {
+            @media screen and (max-width: 650px) {
                 mask-image: none;
             }
         }

@@ -10,13 +10,13 @@ import FooterComponent from './components/FooterComponents/FooterComponent.vue'
 <template>
     <LoaderMainComponent />
     <HeaderMainComponent />
-    <ChoiceNavComponent class="navigation"/>
+    <ChoiceNavComponent class="navigation" />
     <RouterView />
     <FooterComponent />
 </template>
 
 <style lang="scss" scoped>
-.navigation{
+.navigation {
     position: sticky;
     top: 0;
     background-color: #000;

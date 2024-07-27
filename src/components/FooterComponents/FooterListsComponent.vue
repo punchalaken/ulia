@@ -43,6 +43,7 @@ import { useContactsItemsStore } from '@/stores/contactsStore'
         font-family: 'Raleway';
         font-weight: 400;
         font-size: 23px;
+        padding: 0;
     }
 
     .footer__navigation,

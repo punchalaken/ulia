@@ -8,14 +8,13 @@ import CaseItem from './CaseItem.vue'
         <h2 class="case__header">Примеры работ</h2>
         <div class="case__item-container">
             <CaseItem
-            v-for="(item, index) in useCaseItemsStore().$state.caseItems"
-            :name="item.name"
-            :before="item.before"
-            :after="item.after"
-            :key="index"
-        />
+                v-for="(item, index) in useCaseItemsStore().$state.caseItems"
+                :name="item.name"
+                :before="item.before"
+                :after="item.after"
+                :key="index"
+            />
         </div>
-        
     </div>
 </template>
 
@@ -27,11 +26,11 @@ import CaseItem from './CaseItem.vue'
     max-width: 1200px;
     margin-bottom: 20px;
 
-    .case__item-container{
+    .case__item-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-    }    
+    }
 }
 </style>
