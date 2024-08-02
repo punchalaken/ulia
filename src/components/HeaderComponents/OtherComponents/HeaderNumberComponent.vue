@@ -21,9 +21,10 @@ const formatNumber: string = telephone.tel.replace(
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets//flexCenter.scss';
+
 .header__number {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     gap: 5px;
     font-size: clamp(0.3rem, 0.5rem + 0.5vw, 3rem);
     font-weight: 500;

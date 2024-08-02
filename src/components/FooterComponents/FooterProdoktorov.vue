@@ -13,9 +13,11 @@
 </template>
 
 <style lang="scss" scoped>
+
+@import '/src/assets//flexCenter.scss';
+
 .footer__links {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
 
     .footer__prodoctorov {
         width: 300px;

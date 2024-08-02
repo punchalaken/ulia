@@ -11,11 +11,13 @@ import FooterListsComponent from './FooterListsComponent.vue'
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
+@import '/src/assets//flexCenter.scss';
+
+
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid #ac8349;
+    @include flex-center;
+    border-top: $border;
     width: 100%;
     min-height: 300px;
     margin-block: 30px;

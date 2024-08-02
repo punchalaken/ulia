@@ -39,25 +39,25 @@ const fieldObjects = [
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
+@import '/src/assets//flexCenter.scss';
+
+
 form {
     font-family: 'Releway';
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-center;
     gap: 30px;
     max-width: 360px;
     box-sizing: border-box;
     width: 90%;
-    border: 2px solid #ac8349;
+    border: $border;
     padding-block: 20px;
     margin-block: 30px;
 
     .form__send {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
         margin-top: 25px;
-        background-color: #ac8349;
+        background-color: $golden-color;
         width: 150px;
         height: 50px;
         border-radius: 40px;

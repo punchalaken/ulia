@@ -19,17 +19,19 @@ import CaseItem from './CaseItem.vue'
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets//flexCenter.scss';
+
+
 .case__container {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
+
     max-width: 1200px;
     margin-bottom: 20px;
 
     .case__item-container {
-        display: flex;
+        @include flex-center;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 20px;
     }
 }

@@ -26,10 +26,12 @@ function focusField() {
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
+@import '/src/assets//flexCenter.scss';
+
+
 .form__field {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-center;
     gap: 7px;
     position: relative;
 
@@ -49,14 +51,14 @@ function focusField() {
         padding: 10px;
         box-sizing: border-box;
         text-align: center;
-        border: 2px solid #ac8349;
+        border: $border;
     }
 
     input:focus,
     textarea:focus {
-        border-color: #ac8349;
+        border-color: $golden-color;
         outline: none;
-        box-shadow: 0 0 15px #ac8349;
+        box-shadow: 0 0 15px $golden-color;
     }
 
     textarea {

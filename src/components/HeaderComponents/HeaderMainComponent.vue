@@ -13,6 +13,8 @@ import HeaderNumberComponent from './OtherComponents/HeaderNumberComponent.vue'
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
+
 .header {
     box-sizing: border-box;
     display: flex;
@@ -25,7 +27,7 @@ import HeaderNumberComponent from './OtherComponents/HeaderNumberComponent.vue'
     min-height: 100px;
 
     @media screen and (width<=900px) {
-        border-bottom: 2px solid #ac8349;
+        border-bottom: $border;
         min-height: 50px;
     }
 

@@ -16,5 +16,12 @@ defineProps<{
     text-decoration: none;
     list-style: none;
     color: inherit;
+
+    @media (hover:hover) {
+        &:hover{
+            color: #ac8349;
+            transition: all .3s;
+        }
+    }
 }
 </style>

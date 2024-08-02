@@ -18,10 +18,11 @@ import { useServiceItemsStore } from '@/stores/serviceItemStore'
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets//flexCenter.scss';
+
 .services {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
     margin: 0 20px 20px;
 
     @media screen and (width<400px) {
@@ -29,8 +30,7 @@ import { useServiceItemsStore } from '@/stores/serviceItemStore'
     }
 
     .services__container {
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         flex-direction: row;
         flex-wrap: wrap;
         max-width: 1200px;

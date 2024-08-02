@@ -16,6 +16,9 @@ defineProps<{
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
+@import '/src/assets//flexCenter.scss';
+
 .service__item {
     display: flex;
     flex-direction: column;
@@ -25,7 +28,7 @@ defineProps<{
     max-width: 320px;
     width: 100%;
     height: 350px;
-    border: 2px solid #ac8349;
+    border: $border;
     padding: 20px 10px;
     box-sizing: border-box;
 
@@ -35,8 +38,7 @@ defineProps<{
     }
 
     .service__item-header {
-        display: flex;
-        align-items: center;
+        @include flex-center;
         text-align: center;
         font-weight: 400;
         font-size: 20px;
@@ -45,12 +47,10 @@ defineProps<{
 
     .service__record {
         bottom: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
         width: 150px;
         height: 40px;
-        background-color: #ac8349;
+        background-color: $golden-color;
         border-radius: 20px;
 
         &:hover {

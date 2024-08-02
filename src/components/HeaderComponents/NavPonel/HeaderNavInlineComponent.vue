@@ -17,11 +17,14 @@ import { useNavItemsStore } from '@/stores/navPonelStore'
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
+@import '/src/assets//flexCenter.scss';
+
+
 .header__nav {
-    display: flex;
-    justify-content: center;
-    border-top: 2px solid #ac8349;
-    border-bottom: 2px solid #ac8349;
+    @include flex-center;
+    border-top: $border;
+    border-bottom: $border;
     width: 100%;
     height: 40px;
     z-index: 100;

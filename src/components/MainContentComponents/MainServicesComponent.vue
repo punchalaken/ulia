@@ -21,10 +21,12 @@ import { useServiceItemsStore } from '@/stores/serviceItemStore'
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
+@import '/src/assets//flexCenter.scss';
+
 .main__service {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
     box-sizing: border-box;
     margin-inline: 10px;
     max-width: 1200px;
@@ -34,13 +36,11 @@ import { useServiceItemsStore } from '@/stores/serviceItemStore'
     }
 
     h3 {
-        margin-top: 40px;
+        margin-top: 20px;
     }
     .main__service-container {
-        display: flex;
+    @include flex-center;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
         flex-wrap: wrap;
         gap: 40px;
     }
@@ -49,10 +49,15 @@ import { useServiceItemsStore } from '@/stores/serviceItemStore'
         align-items: center;
         justify-content: center;
         margin-top: 25px;
-        background-color: #ac8349;
+        background-color: $golden-color;
         width: 150px;
         height: 50px;
         border-radius: 40px;
+
+        &:hover {
+            background-color: rgb(149, 102, 36);
+            transition: all 0.5s;
+        }
     }
 }
 </style>

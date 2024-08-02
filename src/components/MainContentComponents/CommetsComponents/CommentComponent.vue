@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import CommetContent from './CommetContent.vue'
-import AddCommentHref from './AddCommentHref.vue';
+import AddCommentHref from './AddCommentHref.vue'
 import { useCommentsStore } from '@/stores/commets'
 import { computed, ref } from 'vue'
 
@@ -29,40 +29,42 @@ const prevComment = () => {
         <h3 class="comments__header">Отзывы</h3>
         <div class="comments__item">
             <img
-                src="/src/assets/images/CommentArrow.svg"
+                src="/src/assets/images/commentArrow.svg"
                 alt="Следующий комментарий"
                 class="comments__item-image before"
                 @click="prevComment"
             />
             <CommetContent :persone="commentSlide.persone" :content="commentSlide.content" />
             <img
-                src="/src/assets/images/CommentArrow.svg"
+                src="/src/assets/images/commentArrow.svg"
                 alt="Следующий комментарий"
                 class="comments__item-image next"
                 @click="nextComment"
             />
         </div>
         <div class="comments__count">{{ commentIndex + 1 }}/{{ commentLength }}</div>
-        <AddCommentHref/>
+        <AddCommentHref />
     </section>
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
+@import '/src/assets//flexCenter.scss';
+
 .comments {
+    @include flex-center;
     position: relative;
-    display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     max-width: 900px;
     width: 100%;
 
     .comments__header {
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .comments__item {
-        border: 2px solid #ac8349;
+        border: $border;
         margin-inline: 40px;
         min-height: 100px;
 

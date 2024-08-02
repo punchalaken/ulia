@@ -25,12 +25,15 @@ defineProps<{
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
+@import '/src/assets//flexCenter.scss';
+
 .case__item {
     box-sizing: border-box;
     gap: 20px;
     width: 580px;
     min-width: 360px;
-    border: 2px solid #ac8349;
+    border: $border;
     border-top: None;
 
     @media screen and (width<650px) {
@@ -39,13 +42,11 @@ defineProps<{
     }
 
     .case__item-header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         text-align: center;
         margin: 0;
         padding: 20px;
-        border-block: 2px solid #ac8349;
+        border-block: $border;
         font-size: 17px;
         font-family: 'Releway';
     }

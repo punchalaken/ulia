@@ -30,6 +30,8 @@ function isOpen(): void {
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
+
 .header__burger {
     position: absolute;
     left: 5px;
@@ -48,7 +50,7 @@ function isOpen(): void {
         position: absolute;
         width: 30px;
         height: 3px;
-        background-color: #ac8349;
+        background-color: $golden-color;
         left: 5px;
         transition:
             transform 0.5s,

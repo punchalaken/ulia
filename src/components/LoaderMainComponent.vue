@@ -22,6 +22,8 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets//flexCenter.scss';
+
 .loader-bg {
     position: fixed;
     top: 0;
@@ -29,9 +31,7 @@ onMounted(() => {
     bottom: 0;
     right: 0;
     z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     background-color: #000000;
     transition: 0.4s ease;
 }

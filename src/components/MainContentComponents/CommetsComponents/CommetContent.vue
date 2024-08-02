@@ -12,12 +12,13 @@ defineProps<{
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/border.scss';
 
 .comments__item-header{
     font-family: 'Releway';
     font-size: 22px;
     padding: 5px;
-    border-bottom: 2px solid #ac8349;
+    border-bottom: $border;
 }
 
 .comments__item-content{
