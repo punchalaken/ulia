@@ -21,7 +21,6 @@ import CaseItem from './CaseItem.vue'
 <style lang="scss" scoped>
 @import '/src/assets//flexCenter.scss';
 
-
 .case__container {
     @include flex-center;
     flex-direction: column;

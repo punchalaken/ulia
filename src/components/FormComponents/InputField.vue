@@ -42,7 +42,6 @@ function focusField() {
 @import '/src/assets/border.scss';
 @import '/src/assets//flexCenter.scss';
 
-
 .form__field {
     @include flex-center;
     gap: 7px;

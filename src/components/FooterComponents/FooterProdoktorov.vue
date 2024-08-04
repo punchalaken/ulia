@@ -13,7 +13,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 @import '/src/assets//flexCenter.scss';
 
 .footer__links {

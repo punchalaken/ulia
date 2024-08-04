@@ -17,10 +17,10 @@ defineProps<{
     list-style: none;
     color: inherit;
 
-    @media (hover:hover) {
-        &:hover{
+    @media (hover: hover) {
+        &:hover {
             color: #ac8349;
-            transition: all .3s;
+            transition: all 0.3s;
         }
     }
 }

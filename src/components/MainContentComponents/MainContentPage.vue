@@ -13,7 +13,7 @@ import MainServicesComponent from './MainServicesComponent.vue'
     </section>
 
     <MainServicesComponent />
-    <CommentComponent/>
+    <CommentComponent />
 </template>
 
 <style lang="scss" scoped>

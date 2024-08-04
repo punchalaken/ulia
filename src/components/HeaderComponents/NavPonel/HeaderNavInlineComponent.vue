@@ -20,7 +20,6 @@ import { useNavItemsStore } from '@/stores/navPonelStore'
 @import '/src/assets/border.scss';
 @import '/src/assets//flexCenter.scss';
 
-
 .header__nav {
     @include flex-center;
     border-top: $border;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import InputField from './InputField.vue'
-import TextAreaField from './TextAreaField.vue';
+import TextAreaField from './TextAreaField.vue'
 
 const fieldObjects = [
     {
@@ -32,7 +32,7 @@ const fieldObjects = [
             :russ-value="item.russValue"
         />
 
-        <TextAreaField/>
+        <TextAreaField />
 
         <input type="submit" value="Send" class="form__send" />
     </form>
@@ -41,7 +41,6 @@ const fieldObjects = [
 <style lang="scss" scoped>
 @import '/src/assets/border.scss';
 @import '/src/assets//flexCenter.scss';
-
 
 form {
     font-family: 'Releway';

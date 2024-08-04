@@ -14,7 +14,6 @@ import FooterListsComponent from './FooterListsComponent.vue'
 @import '/src/assets/border.scss';
 @import '/src/assets//flexCenter.scss';
 
-
 footer {
     @include flex-center;
     border-top: $border;

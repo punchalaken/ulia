@@ -21,14 +21,19 @@ function focusField() {
     <div class="form__field">
         <label for="message">Отзыв:</label>
         <div class="error" v-if="!isValid">Заполните поле</div>
-        <textarea id="message" name="message" @blur="checkValid" @focus="focusField" v-model="textField"></textarea>
+        <textarea
+            id="message"
+            name="message"
+            @blur="checkValid"
+            @focus="focusField"
+            v-model="textField"
+        ></textarea>
     </div>
 </template>
 
 <style lang="scss" scoped>
 @import '/src/assets/border.scss';
 @import '/src/assets//flexCenter.scss';
-
 
 .form__field {
     @include flex-center;

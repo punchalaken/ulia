@@ -39,7 +39,7 @@ import { useServiceItemsStore } from '@/stores/serviceItemStore'
         margin-top: 20px;
     }
     .main__service-container {
-    @include flex-center;
+        @include flex-center;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 40px;
