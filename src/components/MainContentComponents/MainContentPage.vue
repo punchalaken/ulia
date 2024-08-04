@@ -9,7 +9,7 @@ import MainServicesComponent from './MainServicesComponent.vue'
             <div class="first">Забота о Вас</div>
             <div class="second">и Вашей улыбке</div>
         </div>
-        <img src="/src//assets/images/motto-photo.jpg" alt="Мое фото" class="main__photo" />
+        <img src="/src//assets/images/mottoPhoto.jpg" alt="Мое фото" class="main__photo" />
     </section>
 
     <MainServicesComponent />

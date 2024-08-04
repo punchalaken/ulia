@@ -13,12 +13,12 @@ defineProps<{
             <img
                 :src="`/src/assets/images/casesImages/${before}.jpg`"
                 alt="Фотография до"
-                class="case__image circular-mask"
+                class="case__image"
             />
             <img
                 :src="`/src/assets/images/casesImages/${after}.jpg`"
                 alt="Фотография после"
-                class="case__image circular-mask"
+                class="case__image"
             />
         </div>
     </div>
@@ -31,19 +31,15 @@ defineProps<{
 .case__item {
     box-sizing: border-box;
     gap: 20px;
-    width: 580px;
     min-width: 360px;
+    max-width: 400px;
     border: $border;
     border-top: None;
-
-    @media screen and (width<650px) {
-        width: 360px;
-        margin: 0;
-    }
 
     .case__item-header {
         @include flex-center;
         text-align: center;
+        height: 60px;
         margin: 0;
         padding: 20px;
         border-block: $border;
@@ -52,37 +48,23 @@ defineProps<{
     }
 
     .case-image__container {
+        box-sizing: border-box;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
+        justify-content: space-around;
+        height: calc(100% - 80px);
         gap: 20px;
         padding: 20px;
 
-        @media screen and (width<650px) {
-            flex-direction: column;
+        @media screen and (width<400px) {
         }
 
         .case__image {
-            width: 250px;
-            height: 300px;
-
-            @media screen and (width<650px) {
-                width: 300px;
-                height: 350px;
-            }
-        }
-
-        .circular-mask {
-            mask-image: radial-gradient(
-                circle,
-                rgba(0, 0, 0, 1) 70%,
-                rgba(0, 0, 0, 0) 100%
-            );
-
-            @media screen and (max-width: 650px) {
-                mask-image: none;
-            }
+            display: block;
+            width: 350px;
+            height: 200px;
+            border-radius: 20px;
         }
     }
 }

@@ -2,47 +2,30 @@
 import CommetContent from './CommetContent.vue'
 import AddCommentHref from './AddCommentHref.vue'
 import { useCommentsStore } from '@/stores/commets'
-import { computed, ref } from 'vue'
 
-const commentLength = useCommentsStore().$state.comments.length
-const commentIndex = ref<number>(0)
-const commentSlide = computed(() => useCommentsStore().$state.comments[commentIndex.value])
-const isLastComment = computed(() => commentIndex.value >= commentLength - 1)
-
-const nextComment = () => {
-    if (isLastComment.value) {
-        return (commentIndex.value = 0)
-    }
-    commentIndex.value++
-}
-
-const prevComment = () => {
-    if (commentIndex.value === 0) {
-        return (commentIndex.value = commentLength - 1)
-    }
-    commentIndex.value--
-}
 </script>
 
 <template>
-    <section class="comments">
-        <h3 class="comments__header">Отзывы</h3>
-        <div class="comments__item">
+    <section class="slider">
+        <h3 class="slider__header">Отзывы</h3>
+        <div class="slider__item">
             <img
                 src="/src/assets/images/commentArrow.svg"
                 alt="Следующий комментарий"
-                class="comments__item-image before"
-                @click="prevComment"
+                class="slider__item-image before"
             />
-            <CommetContent :persone="commentSlide.persone" :content="commentSlide.content" />
+            <CommetContent
+                v-for="(item, key) in useCommentsStore().$state.comments"
+                :key="key"
+                :persone="item.persone"
+                :content="item.content"
+            />
             <img
                 src="/src/assets/images/commentArrow.svg"
                 alt="Следующий комментарий"
-                class="comments__item-image next"
-                @click="nextComment"
+                class="slider__item-image next"
             />
         </div>
-        <div class="comments__count">{{ commentIndex + 1 }}/{{ commentLength }}</div>
         <AddCommentHref />
     </section>
 </template>
@@ -51,7 +34,7 @@ const prevComment = () => {
 @import '/src/assets/border.scss';
 @import '/src/assets//flexCenter.scss';
 
-.comments {
+.slider {
     @include flex-center;
     position: relative;
     flex-direction: column;
@@ -59,11 +42,11 @@ const prevComment = () => {
     max-width: 900px;
     width: 100%;
 
-    .comments__header {
+    .slider__header {
         margin-top: 20px;
     }
 
-    .comments__item {
+    .slider__item {
         border: $border;
         margin-inline: 40px;
         min-height: 100px;
@@ -84,9 +67,6 @@ const prevComment = () => {
             top: 200px;
             right: 0;
         }
-    }
-    .comments__count {
-        margin-top: 10px;
     }
 }
 </style>
