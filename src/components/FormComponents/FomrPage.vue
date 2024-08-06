@@ -45,6 +45,7 @@ const fieldObjects = [
 form {
     font-family: 'Releway';
     @include flex-center;
+    flex-direction: column;
     gap: 30px;
     max-width: 360px;
     box-sizing: border-box;

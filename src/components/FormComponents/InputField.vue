@@ -44,6 +44,7 @@ function focusField() {
 
 .form__field {
     @include flex-center;
+    flex-direction: column;
     gap: 7px;
     position: relative;
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation } from 'swiper/modules'
 import { useCommentsStore } from '@/stores/commets'
 import 'swiper/scss'
 import 'swiper/scss/navigation'
