@@ -1,5 +1,5 @@
-import './assets/normalize.css'
 import './assets/main.css'
+import './assets/normalize.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
